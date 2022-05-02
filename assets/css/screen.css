@@ -55,9 +55,15 @@ production stylesheet in assets/built/screen.css
     --font-sans-serif: -apple-system, BlinkMacSystemFont, "Lato", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
-
 }
 
+    /* buttons */
+    .kg-header-card-button {
+        border-radius: 24px !important;
+    }
+    .kg-btn {
+        border-radius: 24px !important;
+    }
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */

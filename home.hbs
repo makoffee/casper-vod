@@ -33,20 +33,13 @@ into the {body} of the default.hbs template --}}
     <!-- from post.hbs -->
     <div class="inner">
         {{#page}}
-        <article class="post-full {{post_class}}" style="display:flex">
-	   <div style="width:50%">
-            <header class="post-full-header">
-
+        <article class="post-full {{post_class}}">
+        	<div style="display: flex">
+		<div style="flex: 1;">
                 <h1 class="post-full-title">{{title}}</h1>
-
-            </header>
-
-            <section class="post-full-content">
-                <div class="post-content">
                     {{content}}
-                </div>
-           </div>
-		<div style="width:50%">
+		</div>
+		<div style="flex: 1">
 		<img
                     srcset="{{img_url feature_image size="s"}} 300w,
                             {{img_url feature_image size="m"}} 600w,
@@ -54,12 +47,10 @@ into the {body} of the default.hbs template --}}
                             {{img_url feature_image size="xl"}} 2000w"
                     sizes="(min-width: 1400px) 1400px, 92vw"
                     src="{{img_url feature_image size="xl"}}"
-                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                />
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"/>
+        	</div>
 		</div>
-            </section>
-
-        </article>
+	</article>
         {{/page}}
     </div>
     <div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-accent" style="" data-kg-background-image="">
@@ -84,6 +75,7 @@ into the {body} of the default.hbs template --}}
     {{/is}}
     <div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-image" style="background-image: url(content/images/2022/05/gradienta-m_7p45JfXQo-unsplash-rotate.jpg)" data-kg-background-image="content/images/2022/05/gradienta-m_7p45JfXQo-unsplash-rotate.jpg">
         <h2 class="kg-header-card-header" id="discover-our-policy-positions-and-find-out-how-you-can-get-involved">Discover our policy positions and find out how you can get involved.</h2>
-        <a href="/positions/" class="kg-header-card-button">Positions</a>&nbsp;<a href="/contact/" class="kg-header-card-button">Contact us</a>
-    </div>
+        <a href="/positions/" class="kg-header-card-button">Positions</a>&nbsp;
+        <a href="/contact/" class="kg-header-card-button">Contact us</a> 
+</div>
 </main>
