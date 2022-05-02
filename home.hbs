@@ -62,7 +62,11 @@ into the {body} of the default.hbs template --}}
         </article>
         {{/page}}
     </div>
-
+    <div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-accent" style="" data-kg-background-image="">
+        <h2 class="kg-header-card-header" id="our-membership">Our Membership</h2>
+        <h3 class="kg-header-card-subheader" id="representing-platforms-around-the-world-as-diverse-as-europe-itself">Representing platforms around the world as diverse as Europe itself.</h3>
+        <a href="/membership/" class="kg-header-card-button">Learn More</a>
+    </div>
     <!-- show featured posts -->
     {{^is "paged"}}
     {{#get "posts" filter="featured:true" limit="3"}}
@@ -78,4 +82,8 @@ into the {body} of the default.hbs template --}}
     </div>
     {{/get}}
     {{/is}}
+    <div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-image" style="background-image: url(content/images/2022/05/gradienta-m_7p45JfXQo-unsplash-rotate.jpg)" data-kg-background-image="content/images/2022/05/gradienta-m_7p45JfXQo-unsplash-rotate.jpg">
+        <h2 class="kg-header-card-header" id="discover-our-policy-positions-and-find-out-how-you-can-get-involved">Discover our policy positions and find out how you can get involved.</h2>
+        <a href="/positions/" class="kg-header-card-button">Positions</a>&nbsp;<a href="/contact/" class="kg-header-card-button">Contact us</a>
+    </div>
 </main>
