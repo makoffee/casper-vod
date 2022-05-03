@@ -583,6 +583,15 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     object-fit: cover;
 }
 
+.post-card-large .post-card-image, .post-card-members .post-card-image {
+    background: none;
+    object-fit: contain;
+}
+
+.invert .post-card-image {
+	filter: brightness(0) invert(1);
+}
+
 .post-card-content-link {
     position: relative;
     display: block;
@@ -632,6 +641,10 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+}
+
+.post-card-large .post-card-content {
+	justify-content: center;
 }
 
 .post-card-excerpt {
@@ -783,6 +796,9 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-feed.list .post-card-large .post-card-content {
         justify-content: flex-start;
         margin-top: -6px;
+     }
+    .center-justify{
+        justify-content: center !important;
     }
 }
 
