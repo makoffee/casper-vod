@@ -52,12 +52,18 @@ production stylesheet in assets/built/screen.css
      */
 
     /* Fonts */
-    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Lato", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
-
 }
 
+    /* buttons */
+    .kg-header-card-button {
+        border-radius: 24px !important;
+    }
+    .kg-btn {
+        border-radius: 24px !important;
+    }
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
@@ -92,7 +98,7 @@ production stylesheet in assets/built/screen.css
 .site-header {
     position: relative;
     color: #fff;
-    background: var(--ghost-accent-color);
+    background: linear-gradient(36deg, rgba(54,27,216,1) 0%, rgba(242,6,116,1) 100%);
 }
 
 .site-header-cover {
@@ -126,7 +132,7 @@ production stylesheet in assets/built/screen.css
 }
 
 .site-logo {
-    max-height: 55px;
+    max-height: 180px;
 }
 
 .site-header-content p {
@@ -175,7 +181,7 @@ production stylesheet in assets/built/screen.css
     font-size: 1.6rem;
     line-height: 1.3em;
     color: #fff;
-    background: var(--ghost-accent-color);
+    background: linear-gradient(36deg, rgba(54,27,216,1) 0%, rgba(242,6,116,1) 100%);
 }
 
 .gh-head a {
@@ -528,6 +534,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     padding: 4vmin 0;
 }
 
+.post-feed.post-card-members {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
 .post-feed.list {
     row-gap: 6vmin;
     max-width: 940px;
@@ -556,6 +568,10 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     word-break: break-word;
 }
 
+.post-card-members .post-card {
+	min-height: auto;
+}
+
 @media (max-width: 700px) {
     .post-card {
         min-height: auto;
@@ -575,6 +591,16 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     background: var(--color-lightgrey) no-repeat center center;
 
     object-fit: cover;
+}
+
+.post-card-large .post-card-image, .post-card-members .post-card-image {
+    background: none;
+    object-fit: contain;
+    height: auto;
+}
+
+.invert .post-card-image {
+	filter: brightness(0) invert(1);
 }
 
 .post-card-content-link {
@@ -626,6 +652,10 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+}
+
+.post-card-large .post-card-content {
+	justify-content: center;
 }
 
 .post-card-excerpt {
@@ -766,6 +796,10 @@ make sure this only happens on large viewports / desktop-ish devices.
         border-top: 0;
     }
 
+    .post-feed.post-card-members {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
     .post-feed.list .post-card-large.no-image {
         grid-template-columns: 1fr;
     }
@@ -777,6 +811,9 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-feed.list .post-card-large .post-card-content {
         justify-content: flex-start;
         margin-top: -6px;
+     }
+    .center-justify{
+        justify-content: center !important;
     }
 }
 
@@ -837,6 +874,9 @@ make sure this only happens on large viewports / desktop-ish devices.
         line-height: 1.55em;
         -webkit-line-clamp: 8;
     }
+    .post-feed.post-card-members {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
 }
 
 
@@ -847,6 +887,9 @@ make sure this only happens on large viewports / desktop-ish devices.
 
     .post-card-excerpt {
         font-size: 1.6rem;
+    }
+    .post-feed.post-card-members {
+    grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -1688,7 +1731,7 @@ iframe.instagram-media + script + :not([id]) {
 
 .site-footer {
     position: relative;
-    margin: 40px 0 0 0;
+    margin: 0;
     padding: 40px 4vmin 140px;
     color: #fff;
     background: color-mod(var(--color-darkgrey) l(-5%));
@@ -1751,18 +1794,16 @@ iframe.instagram-media + script + :not([id]) {
     border-radius: 100%;
 }
 
-@media (max-width: 800px) {
-    .site-footer .inner {
-        max-width: 500px;
-        grid-template-columns: 1fr;
-        grid-gap: 0;
-        text-align: center;
-    }
-    .site-footer .copyright,
-    .site-footer .copyright a {
-        color: #fff;
-        font-size: 1.5rem;
-    }
+.site-footer .inner {
+    max-width: 500px;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    text-align: center;
+}
+.site-footer .copyright,
+.site-footer .copyright a {
+    color: #fff;
+    font-size: 1.5rem;
 }
 
 
@@ -2088,6 +2129,71 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
     html.auto-color .kg-header-card h3.kg-header-card-subheader {
         color: #fff;
     }
+}
+
+/* Custom home-page styles */
+
+.home-intro {
+    max-width: auto;
+    float: auto;
+    margin: 60px 20px 60px 20px;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction:column;
+}
+
+.flex-col {
+	flex: auto;
+}
+
+.home-feature-img {
+	min-height: 50vh;
+	background-position: center;
+}
+
+.final-cta-button {
+	margin: 40px 10px;
+	border: 2px white;
+	background: none;
+	color: white;
+}
+
+.kg-header-card.kg-size-small h2.kg-header-card-header {
+    font-size: 2em !important;
+}
+
+.kg-header-card.kg-size-small {
+    padding-top: 10vmin !important;
+    padding-bottom: 10vmin !important;
+    min-height: 20vh !important;
+}
+
+@media (min-width: 1001px) {
+    .home-intro {
+        max-width: 600px;
+	float: right;
+        }
+    .flex-row {
+        flex-direction:row;
+    }
+    .flex-col {
+        flex: 1;
+    }
+    .home-feature-img {
+        min-height:auto;
+    }
+    .kg-header-card.kg-size-small h2.kg-header-card-header {
+    font-size: 4em !important;
+    }
+}
+
+@media (min-width: 700px) {
+    .kg-header-card.kg-size-small h2.kg-header-card-header {
+        font-size: 3em !important;
+    }
+
 }
 
 /*
