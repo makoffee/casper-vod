@@ -582,7 +582,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     position: relative;
     display: block;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 12px;
 }
 
 .post-card-image {
@@ -2146,6 +2146,7 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
 
 .flex-col {
 	flex: auto;
+	z-index:999;
 }
 
 .home-feature-img {
