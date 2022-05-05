@@ -52,7 +52,7 @@ production stylesheet in assets/built/screen.css
      */
 
     /* Fonts */
-    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Lato", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
 }
@@ -1237,7 +1237,7 @@ except for when immediately preceeded by a heading */
 }
 
 .kg-header-card.kg-style-light h2.kg-header-card-header {
-    color: color-mod(var(--color-darkgrey) l(-5%));
+    color: var(--ghost-accent-color);
 }
 
 .has-serif-title .kg-header-card h2.kg-header-card-header {
@@ -1508,8 +1508,7 @@ iframe.instagram-media + script + :not([id]) {
 .read-more-wrap {
     width: 100%;
     padding: 4vmin;
-    margin: 40px auto -40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0px auto 0px;
     background: color-mod(var(--color-darkgrey) l(-5%));
 }
 
