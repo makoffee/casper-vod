@@ -77,7 +77,6 @@ into the {body} of the default.hbs template --}}
         <div class="post-feed">
             {{#foreach posts}}
 
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card-feature"}}
 
             {{/foreach}}
@@ -85,14 +84,34 @@ into the {body} of the default.hbs template --}}
     </div>
     {{/get}}
     {{/is}}
-    <div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-image" style="background-image: url(content/images/2022/05/gradienta-m_7p45JfXQo-unsplash-rotate.jpg)" data-kg-background-image="content/images/2022/05/gradienta-m_7p45JfXQo-unsplash-rotate.jpg">
-        <h2 class="kg-header-card-header" id="discover-our-policy-positions-and-find-out-how-you-can-get-involved">Discover our policy positions and find out how you can get involved.</h2>
-        <div class="flex-row">
-            <div class="flex-col">
-                 <a href="/positions/" class="kg-header-card-button final-cta-button">Positions</a>
-            </div>
-            <div class="flex-col">
-                <a href="/contact/" class="kg-header-card-button final-cta-button">Contact us</a>            </div>
-        </div> 
-</div>
+
+<!-- custom footer CTA pulled from #fooer-cta tagged post -->
+
+    {{#get "posts" filter="tag:hash-footer-cta" limit="1"}}
+    {{#foreach posts}}
+    <div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-image" style="background-image: url({{feature_image}})" data-kg-background-image="content/images/2022/05/gradienta-m_7p45JfXQo-unsplash-rotate.jpg">
+        <h2 class="kg-header-card-header" id="discover-our-policy-positions-and-find-out-how-you-can-get-involved">{{title}}</h2>
+        {{content}}
+    {{/foreach}}
+    {{/get}}
+    </div>
+<!-- end custom footer -->
+
+    {{!-- Read more links, just above the footer --}}
+    {{!-- The {#get} helper below fetches some of the latest posts here
+    so that people have something else to read when they finish this one.
+
+    This query gets the latest 3 posts on the site, but adds a filter to
+    exclude the post we're currently on from being included. --}}
+    {{#get "posts" filter="tag:positions" include="authors" limit="3"}}
+
+            <aside class="read-more-wrap">
+                <div class="read-more inner">
+                    {{#foreach posts}}
+                        {{> "post-card-lite"}}
+                    {{/foreach}}
+                </div>
+            </aside>
+
+    {{/get}}
 </main>
