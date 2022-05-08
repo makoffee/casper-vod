@@ -1,0 +1,27 @@
+{{!< default}}
+
+{{!-- The tag above means: insert everything in this file
+into the {body} tag of the default.hbs template --}}
+
+
+{{#post}}
+{{!-- Everything inside the #post block pulls data from the page --}}
+
+<main id="site-main" class="site-main">
+    {{#page}}
+        <article class="post-full {{post_class}}">
+        	<div class="flex-row">
+		<div class="flex-col">
+                <div class="gh-content home-intro">
+                <h1 class="article-title">{{title}}</h1>
+                    {{content}}
+		</div>
+                </div>
+		<div class="flex-col home-feature-img" style="background-image: url({{img_url feature_image}})">
+        	</div>
+		</div>
+	</article>
+    {{/page}}
+</main>
+
+{{/post}}
