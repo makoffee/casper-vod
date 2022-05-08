@@ -36,7 +36,7 @@ into the {body} of the default.hbs template --}}
         	<div class="flex-row">
 		<div class="flex-col">
                 <div class="gh-content home-intro">
-                <h1 class="post-full-title">{{title}}</h1>
+                <h1 class="article-title">{{title}}</h1>
                     {{content}}
 		</div>
                 </div>
@@ -74,7 +74,7 @@ into the {body} of the default.hbs template --}}
     {{^is "paged"}}
     {{#get "posts" filter="featured:true" limit="3"}}
     <div class="inner posts">
-        <div class="post-feed">
+        <div class="post-feed feature">
             {{#foreach posts}}
 
                 {{> "post-card-feature"}}

@@ -1,7 +1,6 @@
-{{!-- This is a partial file used to generate a post "card"
-which templates loop over to generate a list of posts. --}}
+{{!-- This is a partial file used to generate featured posts with content --}}
 
-<article class="post-card {{post_class}} {{#match @custom.feed_layout "!=" "Simple grid"}}{{#is "home, paged"}}{{#match @custom.feed_layout "Dynamic grid"}}{{#has index="0"}}{{#is "home"}}{{#if feature_image}}post-card-large{{/if}}{{/is}}{{/has}}{{else}}post-card-large{{/match}}{{/is}}{{/match}}">
+<article class="post-card {{post_class}}">
 
     {{#if feature_image}}
         {{!-- This is a responsive image, it loads different sizes depending on device
