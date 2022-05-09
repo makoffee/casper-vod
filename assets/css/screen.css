@@ -2217,6 +2217,7 @@ html {
 .home-feature-img {
 	min-height: 50vh;
 	background-position: center;
+	background-size: cover;
 }
 
 .final-cta-button {
