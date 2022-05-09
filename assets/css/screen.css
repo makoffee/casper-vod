@@ -191,7 +191,7 @@ production stylesheet in assets/built/screen.css
 
 .gh-head-inner {
     display: grid;
-    grid-gap: 2.5vmin;
+    grid-gap: 5vmin;
     grid-template-columns: auto auto 1fr;
     grid-auto-flow: row dense;
 }
@@ -433,7 +433,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         user-select: none;
     }
     .home-template #gh-head.has-cover .gh-head-brand {
-        justify-content: flex-end;
+        
     }
     #gh-head .gh-head-menu {
         align-self: center;
@@ -516,8 +516,8 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .home-template .gh-head.has-cover .gh-head-logo {
-    display: none;
 }
+
 .home-template .gh-head.has-cover .gh-head-menu {
     margin-left: -2.5vmin;
 }

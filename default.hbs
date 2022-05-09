@@ -111,6 +111,9 @@ $(document).ready(function () {
     });
     // FitVids - Makes video embeds responsive
     $(".gh-content").fitVids();
+    $(".nav-current").click(function() {
+        $("body").removeClass("gh-head-open");
+    });
     $(window).on("scroll", function() {
     if($(window).scrollTop() > 80) {
         $(".gh-head").addClass("active");
