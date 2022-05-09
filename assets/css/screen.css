@@ -189,6 +189,8 @@ production stylesheet in assets/built/screen.css
     text-decoration: none;
 }
 
+/* fix header */
+
 .gh-head-inner {
     display: grid;
     grid-gap: 5vmin;
