@@ -2152,6 +2152,10 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
 	z-index: 1000;
 }
 
+html {
+    scroll-padding-top:100px;
+}
+
 .gh-head.active {
 	background: linear-gradient(36deg,#361bd8,#f20674) !important;
 }
