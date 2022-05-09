@@ -3,8 +3,9 @@
 <article class="post-card {{post_class}}">
 
     {{#if feature_image}}
-        {{!-- This is a responsive image, it loads different sizes depending on device
-        https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
+        <div class="feature-overlay">
+            <h2>{{title}}</h2>
+        </div>
         <img class="post-card-image"
             srcset="{{img_url feature_image size="s"}} 300w,
                     {{img_url feature_image size="m"}} 600w,
@@ -19,9 +20,6 @@
 
     <div class="post-card-content">
 
-            <header class="post-card-header">
-                <h2 class="post-card-title">{{title}}</h2>
-            </header>
             <div class="post-card-excerpt">
                 <p>{{content}}</p>
             </div>

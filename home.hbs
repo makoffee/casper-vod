@@ -33,7 +33,7 @@ into the {body} of the default.hbs template --}}
     <!-- from post.hbs -->
         {{#page}}
         <article class="post-full {{post_class}}">
-        	<div class="flex-row">
+        	<div class="vertical-banner">
 		<div class="flex-col">
                 <div class="gh-content home-intro">
                 <h1 class="article-title">{{title}}</h1>
@@ -65,13 +65,14 @@ into the {body} of the default.hbs template --}}
 
 <!-- end member logos -->
 
-        <a href="/members/" class="kg-header-card-button">Learn More</a>
+        <a href="/members/" class="kg-header-card-button ghost-button">Learn More</a>
     </div>
+
     <!-- show featured posts -->
     <div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-light" style="" data-kg-background-image="">
         <h2 class="kg-header-card-header" id="our-work">Our Work</h2>
     </div>
-    {{^is "paged"}}
+    <div class="outer">
     {{#get "posts" filter="featured:true" limit="3"}}
     <div class="inner posts">
         <div class="post-feed feature">
@@ -83,7 +84,7 @@ into the {body} of the default.hbs template --}}
         </div>
     </div>
     {{/get}}
-    {{/is}}
+    </div>
 
 <!-- custom footer CTA pulled from #fooer-cta tagged post -->
 

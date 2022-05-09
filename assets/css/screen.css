@@ -536,13 +536,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .post-feed.feature {
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0px;
 }
 
 .post-feed.post-card-members {
     grid-template-columns: 1fr 1fr 1fr;
 }
-
-
 
 .post-feed.list {
     row-gap: 6vmin;
@@ -598,8 +597,8 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 .post-card-image {
     width: 100%;
     height: 200px;
-    background: var(--color-lightgrey) no-repeat center center;
-
+    background: #eeeeee no-repeat center center;
+    border-radius: 12px;
     object-fit: cover;
 }
 
@@ -908,7 +907,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 /* ---------------------------------------------------------- */
 
 .article {
-    padding: 8vmin 0;
+    padding: 12vmin 0;
     word-break: break-word;
 }
 
@@ -2146,8 +2145,49 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
     margin: -8vmin 0 8vmin 0;
 }
 
+/* sticky header magic */
+.gh-head {
+    position: fixed !important;
+	width: 100%;
+	z-index: 1000;
+}
 
+.gh-head.active {
+	background: linear-gradient(36deg,#361bd8,#f20674) !important;
+}
+
+.site-main.outer {
+    padding-top: 50px;
+    padding-bottom:50px;
+}
 /* Custom home-page styles */
+
+.feature-overlay {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(54,27,216,0.8) 0%, rgba(242,6,116,0.5) 100%);
+    border-radius: 12px;
+}
+
+.feature-overlay h2 {
+    ;margin: 0px;color: white;
+}
+
+.ghost-button {
+    border: 2px solid #ffffff;
+    background: none !important;
+    color: #ffffff !important;
+}
+
+.ghost-button:hover {
+   background: #ffffff !important;
+   color: #361BD8 !important;
+   opacity: 1;
+}
 
 .home-intro {
     max-width: auto;
@@ -2156,6 +2196,11 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
 }
 
 .flex-row {
+	display: flex;
+	flex-direction:row;
+}
+
+.vertical-banner {
 	display: flex;
 	flex-direction:column;
 }
@@ -2171,10 +2216,7 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
 }
 
 .final-cta-button {
-	margin: 40px 10px;
-	border: 2px white;
-	background: none;
-	color: white;
+	margin: 40px 10px 0px 10px;
 }
 
 .kg-header-card.kg-size-small h2.kg-header-card-header {
@@ -2192,7 +2234,7 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
         max-width: 600px;
 	float: right;
         }
-    .flex-row {
+    .vertical-banner {
         flex-direction:row;
     }
     .flex-col {

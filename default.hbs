@@ -66,9 +66,9 @@
                 </div>
 
                 {{#unless @member}}
-                    <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    <a class="gh-head-button ghost-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
                 {{else}}
-                    <a class="gh-head-button" href="#/portal/account" data-portal="account">Account</a>
+                    <a class="gh-head-button ghost-button" href="#/portal/account" data-portal="account">Account</a>
                 {{/unless}}
             </div>
         </nav>
@@ -111,6 +111,13 @@ $(document).ready(function () {
     });
     // FitVids - Makes video embeds responsive
     $(".gh-content").fitVids();
+    $(window).on("scroll", function() {
+    if($(window).scrollTop() > 80) {
+        $(".gh-head").addClass("active");
+    } else {
+        $(".gh-head").removeClass("active");
+    }
+});
 });
 </script>
 
