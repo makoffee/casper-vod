@@ -11,13 +11,6 @@ into the {body} tag of the default.hbs template --}}
     <article class="article {{post_class}} {{#match @custom.post_image_width "Full"}}image-full{{else match @custom.post_image_width "=" "Small"}}image-small{{/match}}">
 
         <header class="article-header gh-canvas">
-
-            <h1 class="article-title">{{title}}</h1>
-
-            {{#if custom_excerpt}}
-            <p class="article-excerpt">{{custom_excerpt}}</p>
-            {{/if}}
-
             {{#if feature_image}}
             <figure class="article-image">
                 {{!-- This is a responsive image, it loads different sizes depending on device
@@ -39,6 +32,7 @@ into the {body} tag of the default.hbs template --}}
         </header>
 
         <section class="gh-content gh-canvas">
+            <h1 class="article-title">{{title}}</h1>
             {{content}}
         </section>
 
