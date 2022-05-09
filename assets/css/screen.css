@@ -520,7 +520,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .home-template .gh-head.has-cover .gh-head-menu {
-    margin-left: -2.5vmin;
 }
 
 
