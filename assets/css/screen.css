@@ -132,7 +132,7 @@ production stylesheet in assets/built/screen.css
 }
 
 .site-logo {
-    max-height: 180px;
+    max-height: 240px;
 }
 
 .site-header-content p {
@@ -168,8 +168,8 @@ production stylesheet in assets/built/screen.css
 }
 
 .site-header-content.large {
-    padding-top: 28vmin;
-    padding-bottom: 28vmin;
+    padding-top: 32vmin;
+    padding-bottom: 32vmin;
 }
 
 
