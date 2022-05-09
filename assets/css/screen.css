@@ -2164,6 +2164,13 @@ html {
     padding-top: 50px;
     padding-bottom:50px;
 }
+
+/* disable image downloads */
+
+img {
+    pointer-events: none;
+}
+
 /* Custom home-page styles */
 
 .feature-overlay {
