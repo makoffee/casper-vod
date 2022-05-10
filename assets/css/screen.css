@@ -433,9 +433,15 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
         justify-content: space-between;
         user-select: none;
     }
-    .home-template #gh-head.has-cover .gh-head-brand {
-        
+    .home-template #gh-head.has-cover .gh-head-logo {
+        opacity:0;
     }
+
+   .home-template #gh-head.active .gh-head-logo {
+        transition: opacity 0.5s ease;
+        opacity:1 !important;
+   }
+
     #gh-head .gh-head-menu {
         align-self: center;
         display: flex;
@@ -2148,12 +2154,13 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
 /* sticky header magic */
 .gh-head {
     position: fixed !important;
-	width: 100%;
-	z-index: 1000;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.5s ease;
 }
 
 html {
-    scroll-padding-top:100px;
+    scroll-padding-top:80px;
 }
 
 .gh-head.active {
@@ -2198,6 +2205,7 @@ img {
    background: #ffffff !important;
    color: #361BD8 !important;
    opacity: 1;
+   transition: all .25s ease-out;
 }
 
 .home-intro {
@@ -2267,6 +2275,10 @@ img {
 
 }
 
+/* magic animation hack */
+* {
+  transition: all .25s ease-out;
+}
 /*
 
 Hey! You reached the end.
