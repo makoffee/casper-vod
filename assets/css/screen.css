@@ -2249,7 +2249,7 @@ img {
     min-height: 20vh !important;
 }
 
-@media (min-width: 1001px) {
+@media (min-width: 900px) {
     .home-intro {
         max-width: 600px;
 	float: right;
