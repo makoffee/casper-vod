@@ -50,7 +50,7 @@ into the {body} of the default.hbs template --}}
         <h3 class="kg-header-card-subheader">Representing video-on-demand and digital entertainment companies of all sizes who distribute and invest in European content.</h3>
         
 <!-- show member logos -->
-        {{#get "posts" filter="tag:members"}}
+        {{#get "posts" filter="tag:members" limit="all"}}
         <div class="inner posts">
             <div class="post-feed post-card-members invert">
                 {{#foreach posts}}
