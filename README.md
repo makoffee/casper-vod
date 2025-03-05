@@ -2,12 +2,6 @@
 
 Theme for VOD Coalition website an blog based on Casper the default theme for [Ghost](http://github.com/tryghost/ghost/).
 
-&nbsp;
-
-![screenshot-desktop](https://raw.githubusercontent.com/makoffee/casper-vod/main/assets/screenshot-desktop.jpg)
-
-&nbsp;
-
 # First time using a Ghost theme?
 
 Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
