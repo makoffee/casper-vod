@@ -974,6 +974,11 @@ make sure this only happens on large viewports / desktop-ish devices.
     width: 100%;
 }
 
+.gh-canvas .article-image .round-image {
+    border-radius: 100%;
+    max-width: 50%;
+}
+
 @media (max-width: 600px) {
     .article-excerpt {
         font-size: 1.8rem;
