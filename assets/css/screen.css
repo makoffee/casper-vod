@@ -974,9 +974,9 @@ make sure this only happens on large viewports / desktop-ish devices.
     width: 100%;
 }
 
-.round-image {
-    border-radius: 100%;
-    max-width: 50%;
+.gh-canvas .article-image img .round-image {
+    border-radius: 100% !important;
+    max-width: 50% !important;
 }
 
 @media (max-width: 600px) {
