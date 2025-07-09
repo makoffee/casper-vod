@@ -608,6 +608,15 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     object-fit: cover;
 }
 
+.post-card-image-round {
+    width: 100%;
+    height: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    border-radius: 100%;
+    object-fit:contain;
+}
+
 .post-card-large .post-card-image, .post-card-members .post-card-image {
     background: none;
     object-fit: contain;
@@ -616,6 +625,10 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .invert .post-card-image {
 	filter: brightness(0) invert(1);
+}
+
+.post-card-image .round-image {
+    border-radius: 100% !important;
 }
 
 .post-card-content-link {
@@ -974,9 +987,9 @@ make sure this only happens on large viewports / desktop-ish devices.
     width: 100%;
 }
 
-.gh-canvas .article-image img .round-image {
+.gh-canvas .article-image .round-image {
     border-radius: 100% !important;
-    max-width: 50% !important;
+    max-width: 40% !important;
 }
 
 @media (max-width: 600px) {
@@ -2197,7 +2210,7 @@ img {
 }
 
 .feature-overlay h2 {
-    ;margin: 0px;color: white;
+    margin: 0px;color: white;
 }
 
 .ghost-button {
@@ -2278,6 +2291,10 @@ img {
         font-size: 3em !important;
     }
 
+}
+
+.text-center {
+    text-align: center;
 }
 
 /* magic animation hack */
