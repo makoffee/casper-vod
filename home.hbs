@@ -104,7 +104,7 @@ into the {body} of the default.hbs template --}}
 
     This query gets the latest 3 posts on the site, but adds a filter to
     exclude the post we're currently on from being included. --}}
-    {{#get "posts" filter="tag:positions" include="authors" limit="3"}}
+    {{#get "posts" filter="tag:positions,tag:news" include="authors" limit="3"}}
 
             <aside class="read-more-wrap">
                 <div class="read-more inner">
