@@ -2301,9 +2301,11 @@ img {
 }
 
 
-.kg-header-card.kg-v2 {
-    padding:0vmin 4em !important;
+.kg-header-card-content {
+    padding:0vmin 2em !important;
 }
+
+
 
 /* magic animation hack */
 * {
