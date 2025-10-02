@@ -90,7 +90,7 @@
         <section id="what-we-stand-for">
             {{#get "pages" filter="slug:home-what-we-stand-for+tag:hash-home-slice" limit="1"}}
                 {{#foreach pages}}
-                    <div {{#if feature_image}} style="background-image: url({{feature_image}}){{/if}}">
+                    <div {{#if feature_image}} style="background-image: url({{feature_image}}); background-size: cover;"{{/if}}>
                         {{content}}
                     </div>
                 {{/foreach}}
