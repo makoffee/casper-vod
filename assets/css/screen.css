@@ -1034,6 +1034,7 @@ use it for applying any other styles. */
 
 .kg-width-full {
     grid-column: full-start / full-end;
+
 }
 
 .kg-width-full img {
@@ -2207,10 +2208,12 @@ img {
     width: 100%;
     background: linear-gradient(0deg, rgba(54,27,216,0.8) 0%, rgba(242,6,116,0.5) 100%);
     border-radius: 12px;
+    text-align: center;
 }
 
 .feature-overlay h2 {
     margin: 0px;color: white;
+    font-size: 2.2rem;
 }
 
 .ghost-button {
@@ -2297,10 +2300,25 @@ img {
     text-align: center;
 }
 
+
+.kg-header-card.kg-v2 {
+    padding:0vmin 4em !important;
+}
+
 /* magic animation hack */
 * {
   transition: all .25s ease-out;
 }
+
+.kg-header-card-heading {
+    font-size: clamp(2em,4vw,3em) !important;
+}
+
+.kg-header-card-subheading {
+    font-size: clamp(1em,2vw,1.25em) !important;
+
+}
+
 /*
 
 Hey! You reached the end.
