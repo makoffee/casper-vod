@@ -2305,6 +2305,63 @@ img {
     padding:0vmin 2em !important;
 }
 
+/* **FINAL DEFINITIVE FIX** for Header Card Image Corners & Spacing */
+
+/* 1. TARGET IMAGE CONTAINER (Highest Specificity) */
+.what-we-stand-for .kg-header-card-image,
+.kg-content-wide .kg-header-card-content .kg-header-card-image {
+    /* Set the border-radius and clipping aggressively */
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    
+    /* Ensure the image container does not have its own padding/margin */
+    padding: 0 !important;
+    margin: 0 !important;
+    
+    /* Ensure the image maintains a correct aspect ratio without stretching */
+    aspect-ratio: 4 / 3; 
+    
+    /* Reset height to allow responsive scaling */
+    height: auto !important;
+    
+    /* **THE FIX:** Force the image to fill the container, overriding 'contain' */
+    /* This applies to the container itself if it's the element holding the background/size logic */
+    object-fit: cover !important; 
+    object-position: top;
+}
+
+/* 2. TARGET NESTED IMAGE TAGS (The actual picture/image inside the container) */
+.what-we-stand-for .kg-header-card-image img,
+.what-we-stand-for .kg-header-card-image picture {
+    /* Apply border-radius to internal elements as well, just in case */
+    border-radius: 20px !important;
+    
+    /* Also apply the object-fit fix to the nested <img> element to be certain */
+    object-fit:cover !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* 3. TARGET CONTENT COLUMN (Manage the Spacing) */
+/* This targets the column next to the image to apply the vertical spacing */
+.what-we-stand-for .kg-header-card-content,
+.kg-content-wide .kg-header-card-content {
+    /* Reset internal padding that would push the content/image out */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    
+    /* Apply the necessary vertical spacing (5.6em) using MARGIN on the wrapper */
+    margin-top: 5.6em !important;
+    margin-bottom: 5.6em !important;
+}
+
+/* 4. TARGET ENTIRE CARD (The Final Clipping Container) */
+.what-we-stand-for .kg-header-card {
+    /* Ensure the entire card unit can clip its contents */
+    overflow: hidden !important;
+}
+
 
 
 /* magic animation hack */

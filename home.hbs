@@ -91,7 +91,9 @@
             {{#get "pages" filter="slug:home-what-we-stand-for+tag:hash-home-slice" limit="1"}}
                 {{#foreach pages}}
                     <div {{#if feature_image}} style="background-image: url({{feature_image}}); background-size: cover;"{{/if}}>
+                        <div class="inner">
                         {{content}}
+                        </div>
                     </div>
                 {{/foreach}}
             {{/get}}
@@ -99,7 +101,8 @@
 
         {{!-- 5. Featured Priorities Section (Dynamic Content) --}}
         <section class="featured-priorities-container" id="featured-priorities">
-            <div class="outer posts">
+            <div class="outer">
+            <div class="inner posts">
                 <div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-light" style="background:none">
                     {{#get "pages" filter="slug:home-priorities-header+tag:hash-home-slice" limit="1"}}
                         {{#foreach pages}}
@@ -115,6 +118,7 @@
                         {{/foreach}}
                     {{/get}}
                 </div>
+            </div>
             </div>
         </section>
 
